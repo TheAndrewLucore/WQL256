@@ -13,6 +13,9 @@ mdeq_extract(mdeq_file, data_file, first_time = FALSE)
 
 \item{first_time}{Logical. Is this the first time this function has run? Defaults to FALSE.}
 }
+\value{
+A cleaned .csv sheet
+}
 \description{
 Extract MDEQ data
 }
