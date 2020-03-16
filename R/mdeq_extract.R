@@ -6,15 +6,17 @@
 #'
 #' @return A cleaned .csv sheet
 #'
+#' @importFrom magrittr %>%
+#'
+#' @importFrom dplyr mutate mutate_at filter select rename recode
+#'
 #' @export
 
 mdeq_extract <- function(mdeq_file, data_file, first_time = FALSE) {
 
-  library(readxl)
-  library(lubridate)
-  library(tidyverse)
+    library(tidyverse)
 
-  dat <- read_xlsx(
+  dat <- readxl::read_xlsx(
     path = mdeq_file,
     col_types = "guess"
   ) %>%
@@ -40,13 +42,13 @@ mdeq_extract <- function(mdeq_file, data_file, first_time = FALSE) {
       .vars = vars(1:3)
     ) %>%
     # Sets it to the correct time zone
-    with_tz(
+    lubridate::with_tz(
       "America/Chicago"
     ) %>%
     # Split date_time but keep it too
     mutate(
-      year = as.factor(year(date_time)),
-      month = as.factor(month(date_time))
+      year = as.factor(lubridate::year(date_time)),
+      month = as.factor(lubridate::month(date_time))
     ) %>%
     # replace MQLs
     mutate(
@@ -86,7 +88,7 @@ mdeq_extract <- function(mdeq_file, data_file, first_time = FALSE) {
     )  %>%
     # Take off REACH00
     mutate(
-      site = str_remove(string = site,
+      site = stringr::str_remove(string = site,
                         pattern = "REACH00")
     ) %>%
     # Put right site numbers
@@ -109,7 +111,7 @@ mdeq_extract <- function(mdeq_file, data_file, first_time = FALSE) {
       14, 1:4, 12, 13, 5:11
     ) %>%
     # Save as CSV
-    write_csv(
+    readr::write_csv(
       path = data_file,
       append = TRUE,
       col_names = first_time, # This needs to be TRUE for the first upload but FALSE for all the subsequent ones
