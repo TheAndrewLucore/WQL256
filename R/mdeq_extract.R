@@ -14,7 +14,6 @@
 
 mdeq_extract <- function(mdeq_file, data_file, first_time = FALSE) {
 
-    library(tidyverse)
 
   dat <- readxl::read_xlsx(
     path = mdeq_file,
