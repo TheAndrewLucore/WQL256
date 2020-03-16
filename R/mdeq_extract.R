@@ -4,6 +4,8 @@
 #' @param data_file The title of the output file
 #' @param first_time Logical. Is this the first time this function has run? Defaults to FALSE.
 #'
+#' @return A cleaned .csv sheet
+#'
 #' @export
 
 mdeq_extract <- function(mdeq_file, data_file, first_time = FALSE) {

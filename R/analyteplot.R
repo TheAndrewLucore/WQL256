@@ -1,11 +1,11 @@
 #' Make an analyte plot
 #'
-#' @param data
-#' @param anlayte
-#' @param Title
-#' @param Ylab
-#' @param Xlab
-#' @param Ylimit
+#' @param data desc
+#' @param anlayte desc
+#' @param Title desc
+#' @param Ylab desc
+#' @param Xlab desc
+#' @param Ylimit desc
 #'
 #' @export
 
