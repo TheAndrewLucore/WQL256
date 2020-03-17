@@ -8,6 +8,7 @@
 #'
 #' @import magrittr
 #' @import dplyr
+#' @importFrom rlang .data
 #'
 #' @export
 
