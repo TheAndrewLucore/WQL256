@@ -1,7 +1,7 @@
 #' Make an analyte plot
 #'
 #' @param data desc
-#' @param anlayte desc
+#' @param analyte desc
 #' @param Title desc
 #' @param Ylab desc
 #' @param Xlab desc
@@ -10,7 +10,7 @@
 #' @export
 
 
-analyteplot <- function(data, analyte, Title, Ylab = "mg/L", Xlab, Ylimt){
+analyteplot <- function(data, analyte, Title, Ylab = "mg/L", Xlab, Ylimit){
   ggplot()+
     geom_boxplot(data = data,
                  aes(x = Farm,
@@ -23,7 +23,7 @@ analyteplot <- function(data, analyte, Title, Ylab = "mg/L", Xlab, Ylimt){
     xlab(Xlab)+
 
     # coord_cartesian(ylim = c())+
-    coord_cartesian(ylim= c(0,Ylimt))+
+    coord_cartesian(ylim= c(0,Ylimit))+
     theme(plot.title = element_text(size = 20, face = "bold"),
           text = element_text(size = 9),
           panel.background = element_rect(fill = "grey90" ))

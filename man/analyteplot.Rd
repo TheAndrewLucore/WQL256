@@ -4,18 +4,18 @@
 \alias{analyteplot}
 \title{Make an analyte plot}
 \usage{
-analyteplot(data, analyte, Title, Ylab = "mg/L", Xlab, Ylimt)
+analyteplot(data, analyte, Title, Ylab = "mg/L", Xlab, Ylimit)
 }
 \arguments{
 \item{data}{desc}
+
+\item{analyte}{desc}
 
 \item{Title}{desc}
 
 \item{Ylab}{desc}
 
 \item{Xlab}{desc}
-
-\item{anlayte}{desc}
 
 \item{Ylimit}{desc}
 }
