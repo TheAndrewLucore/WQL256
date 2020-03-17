@@ -2,10 +2,5 @@
 
 export(analyteplot)
 export(mdeq_extract)
-importFrom(dplyr,filter)
-importFrom(dplyr,mutate)
-importFrom(dplyr,mutate_at)
-importFrom(dplyr,recode)
-importFrom(dplyr,rename)
-importFrom(dplyr,select)
-importFrom(magrittr,"%>%")
+export(yeet)
+import(tidyverse)

@@ -6,9 +6,7 @@
 #'
 #' @return A cleaned .csv sheet
 #'
-#' @importFrom magrittr %>%
-#'
-#' @importFrom dplyr mutate mutate_at filter select rename recode
+#' @import tidyverse
 #'
 #' @export
 

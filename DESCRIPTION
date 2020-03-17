@@ -6,6 +6,8 @@ Author: Andrew Lucore, package developer, function writer. Mark Hill, function w
 Maintainer: Andrew Lucore <andrew.lucore@msstate.edu>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
+Imports:
+	tidyverse
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
