@@ -6,7 +6,8 @@
 #'
 #' @return A cleaned .csv sheet
 #'
-#' @import tidyverse
+#' @import magrittr
+#' @import dplyr
 #'
 #' @export
 

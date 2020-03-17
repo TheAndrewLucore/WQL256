@@ -7,7 +7,9 @@ Maintainer: Andrew Lucore <andrew.lucore@msstate.edu>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 Imports:
-	tidyverse,
+	ggplot2,
+	magrittr,
+	dplyr,
 	lubridate,
 	readr,
 	readxl,
